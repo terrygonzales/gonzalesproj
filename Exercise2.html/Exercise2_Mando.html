@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exercise 2</title>
+</head>
+<body>
+    <center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Click the button to increment the count</p>
+        <p id="count"> 0 </p>
+        <button onclick="increment()">Click Me</button>
+    </center>
+</body>
+
+<style type="text/css">
+    body {
+        background-color: powderblue;
+    }
+    p {
+        font-family: 'Century Gothic';
+        font-size: 20px;
+       
+    }
+
+    button {
+        font-size: 15px;
+    
+</style>
+
+<script type="text/javascript">
+
+    var count = 0;
+    var size = 15;
+
+    function increment() {
+        count++;
+        var text = document.getElementById("count");
+        text.innerHTML = count;
+
+        size++;
+        text.style.fontSize = size;
+    }
+
+
+</script>
+
+</body>
+</html>

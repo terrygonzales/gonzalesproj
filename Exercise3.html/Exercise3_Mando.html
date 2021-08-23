@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exercise3</title>
+</head>
+<body>
+    <br>
+    <br>
+    <center>
+        <p>Click the button to add new element</p>
+        <div id="count"></div>
+        <button onclick="myFunction()">CLICK</button>
+    </center>
+
+    <style type="text/css">
+        body {
+            background-color: floralwhite;
+        }
+            p; {
+            font-family: 'Century Gothic';
+        }
+
+        button {
+            font-size: 15px;
+        }
+    </style>
+
+    <script>
+
+        var count = 0;
+        var size = 15;
+
+
+        function myFunction() {
+            count++;
+            var para = document.createElement("P");
+            para.innerHTML = "This is paragraph " + count;
+            document.getElementById("count").appendChild(para);
+
+            size++;
+            para.style.fontSize = size;
+        }
+
+    </script>
+</body>
+</html>

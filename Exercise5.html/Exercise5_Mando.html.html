@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exercise5</title>
+</head>
+<body>
+    <style type="text/css">
+        button {
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 20%;
+            height: 10%;
+            font-size: 15px;
+        }
+
+        .p {
+            font-family: Cambria;
+            font-size: 20px;
+            width: 60%;
+        }
+
+        .container {
+            height: 350px;
+            width: 400px;
+            margin: 100px auto;
+            background:#14f2bc;
+            box-shadow: 0 0 3px rgb(142, 204, 200);
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+        }
+
+        #res {
+            font-size: 20px;
+        }
+    </style>
+
+    <center>
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <label class="p">Basic Arithmetic Operations</label>
+            <br>
+            <br>
+            <br>
+            <label class="p">Number 1 : </label>
+            <input type="text" id="first" class="p">
+            <label class="p">Number 2 : </label>
+            <input type="text" id="second" class="p">
+
+            <br>
+            <br>
+            <br>
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="mul()">*</button>
+            <button onclick="div()">/</button>
+            <br>
+            <br>
+
+            <div id="res"></div>
+        </div>
+
+
+        <script type="text/javascript">
+
+            function add() {
+
+                var num1 = parseInt(document.querySelector("#first").value);
+                var num2 = parseInt(document.querySelector("#second").value);
+                var result = num1 + num2;
+                document.querySelector("#res").innerHTML = result;
+
+            }
+
+            function sub() {
+
+                var num1 = parseInt(document.querySelector("#first").value);
+                var num2 = parseInt(document.querySelector("#second").value);
+                var result = num1 - num2;
+                document.querySelector("#res").innerHTML = result;
+
+            }
+
+            function mul() {
+
+                var num1 = parseInt(document.querySelector("#first").value);
+                var num2 = parseInt(document.querySelector("#second").value);
+                var result = num1 * num2;
+                document.querySelector("#res").innerHTML = result;
+
+            }
+
+            function div() {
+
+                var num1 = parseInt(document.querySelector("#first").value);
+                var num2 = parseInt(document.querySelector("#second").value);
+                var result = num1 / num2;
+                document.querySelector("#res").innerHTML = result;
+
+            }
+
+
+
+        </script>
+
+
+    </center>
+
+</body>
+</html>

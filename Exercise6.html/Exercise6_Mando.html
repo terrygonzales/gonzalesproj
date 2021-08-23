@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <style type="text/css">
+        body {
+            text-align: center;
+            background-color:#c4d52f;
+        }
+    </style>
+    <br>
+    <br>
+    <br>
+    <button onclick="myFunction()">Click Here</button>
+    <h1>I am H1</h1>
+    <script>
+        function myFunction() {
+            var x = document.createElement("P");
+            var t = document.createTextNode("This is a paragraph followed by a list");
+            x.appendChild(t);
+            document.body.appendChild(x);
+            var a = document.createElement("P");
+            var b = document.createTextNode("I. This is first");
+            a.appendChild(b);
+            document.body.appendChild(a);
+            var c = document.createElement("P");
+            var d = document.createTextNode("II. This is second");
+            c.appendChild(d);
+            document.body.appendChild(c);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exercise 4</title>
+ </head>
+<body>
+    <style type="text/css">
+        body {
+            background-color: lightgray;
+        }
+            p; {
+            font-family: 'Cambria Math';
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+    </style>
+ <center>
+        <button onclick="myFunction()">CLICK</button>
+        <br></br>
+        <table id="myTable" border=1 cellpadding=0 cellspacing=0>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </table>
+        </div>
+    </center>
+    <script>
+        var count = 1;
+        var table = document.getElementById("myTable");
+        var row = table.insertRow(0);
+        row.id = "myRow";
+        var cell1 = row.insertCell(-1);
+        cell1.innerText = 1;
+        cell1.id = count
+        count++;
+        var cell2 = row.insertCell(-1);
+        cell2.innerText = 2;
+        cell2.id = count;
+
+        function myFunction() {
+            var ps = document.getElementById(count).previousSibling.innerText;
+            var lc = document.getElementById("myRow").lastElementChild.innerText;
+            var sum = Number.parseInt(ps) + Number.parseInt(lc);
+
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(0);
+            row.id = "myRow";
+
+            var cell1 = row.insertCell(-1);
+            cell1.innerText = lc;
+            count++;
+            cell1.id = count;
+
+            var cell2 = row.insertCell(-1);
+            cell2.innerText = sum;
+            count++;
+            cell2.id = count;
+
+        }
+    </script>
+
+</body>
+</html>

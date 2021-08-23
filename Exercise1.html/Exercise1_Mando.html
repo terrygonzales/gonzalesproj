@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exercise1</title>
+  
+      <style type="text/css">
+
+          div {
+              font-size: 20px;
+          }
+          body {
+              background-color:lightgray;
+          }
+        .spin {
+            animation-name: spin;
+            animation-duration: 5000ms;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+            
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+           
+            }
+
+            to {
+                transform: rotate(360deg);
+       
+            }
+        }
+       
+        #demo {
+            text-align: center;
+            margin-top: 30px;
+            
+        }
+
+        .myinput {
+            padding: 6px;
+            border-radius: 6px;
+            background-color:peachpuff;
+        }
+
+        .button {
+            padding: 6px;
+            border-radius: 6px;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="text-align:center;margin-top:50px;">
+                <h2><p id="demo">Hello<p></h2>
+                <div style="text-align:center;margin-top:50px;">
+                    <input type="text" id="encode" class="myinput" />
+                    <br /><br /><button id="button" onclick="myFunction()" class="button">CLICK HERE</button>
+                </div>
+        </div>
+           
+    <script type="text/javascript">
+        function myFunction() {
+            document.getElementById("demo").innerHTML = encode.value;
+        }
+        document.getElementById("button").addEventListener("click",spin=>
+        {
+            document.getElementById("demo").classList.toggle("spin");
+        if (encode.value == "")
+            document.getElementById("demo").innerHTML = "Please Input Some Text";
+
+        })
+
+    </script>
+</body>
+
+</html>
